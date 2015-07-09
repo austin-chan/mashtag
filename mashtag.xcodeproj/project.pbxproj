@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		BACBEC6E1B4DA9FC0032C6CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBEC6D1B4DA9FC0032C6CB /* AppDelegate.swift */; };
-		BACBEC701B4DA9FC0032C6CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBEC6F1B4DA9FC0032C6CB /* ViewController.swift */; };
-		BACBEC731B4DA9FC0032C6CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACBEC711B4DA9FC0032C6CB /* Main.storyboard */; };
+		BACBEC701B4DA9FC0032C6CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBEC6F1B4DA9FC0032C6CB /* HomeViewController.swift */; };
 		BACBEC751B4DA9FC0032C6CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACBEC741B4DA9FC0032C6CB /* Images.xcassets */; };
 		BACBEC781B4DA9FC0032C6CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACBEC761B4DA9FC0032C6CB /* LaunchScreen.xib */; };
 		BACBEC841B4DA9FC0032C6CB /* mashtagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBEC831B4DA9FC0032C6CB /* mashtagTests.swift */; };
 		BACBEC8F1B4DAE500032C6CB /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBEC8E1B4DAE4F0032C6CB /* SwiftColors.swift */; };
-		BACBEC921B4DB0110032C6CB /* FAGradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBEC911B4DB0110032C6CB /* FAGradientViewController.swift */; };
+		BACBEC921B4DB0110032C6CB /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBEC911B4DB0110032C6CB /* GradientViewController.swift */; };
+		BACBEC941B4DDC0C0032C6CB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BACBEC931B4DDC0C0032C6CB /* HomeViewController.xib */; };
+		BAE065D01B4DEA1800669D6E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE065CF1B4DEA1800669D6E /* Util.swift */; };
+		BAE065D51B4DEBAF00669D6E /* bunt-display-light-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE065D11B4DEBAF00669D6E /* bunt-display-light-webfont.ttf */; };
+		BAE065D61B4DEBAF00669D6E /* bunt-display-medium-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE065D21B4DEBAF00669D6E /* bunt-display-medium-webfont.ttf */; };
+		BAE065D71B4DEBAF00669D6E /* bunt-display-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE065D31B4DEBAF00669D6E /* bunt-display-regular-webfont.ttf */; };
+		BAE065D81B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE065D41B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf */; };
+		BAE065DE1B4DF41800669D6E /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE065DD1B4DF41800669D6E /* FXLabel.m */; };
+		BAE065E11B4DFE7500669D6E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE065E01B4DFE7500669D6E /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,15 +38,24 @@
 		BACBEC681B4DA9FC0032C6CB /* mashtag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mashtag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACBEC6C1B4DA9FC0032C6CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BACBEC6D1B4DA9FC0032C6CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BACBEC6F1B4DA9FC0032C6CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BACBEC721B4DA9FC0032C6CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BACBEC6F1B4DA9FC0032C6CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BACBEC741B4DA9FC0032C6CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BACBEC771B4DA9FC0032C6CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BACBEC7D1B4DA9FC0032C6CB /* mashtagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mashtagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACBEC821B4DA9FC0032C6CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BACBEC831B4DA9FC0032C6CB /* mashtagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mashtagTests.swift; sourceTree = "<group>"; };
 		BACBEC8E1B4DAE4F0032C6CB /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColors.swift; sourceTree = "<group>"; };
-		BACBEC911B4DB0110032C6CB /* FAGradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAGradientViewController.swift; sourceTree = "<group>"; };
+		BACBEC911B4DB0110032C6CB /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
+		BACBEC931B4DDC0C0032C6CB /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		BAE065CF1B4DEA1800669D6E /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		BAE065D11B4DEBAF00669D6E /* bunt-display-light-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bunt-display-light-webfont.ttf"; sourceTree = "<group>"; };
+		BAE065D21B4DEBAF00669D6E /* bunt-display-medium-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bunt-display-medium-webfont.ttf"; sourceTree = "<group>"; };
+		BAE065D31B4DEBAF00669D6E /* bunt-display-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bunt-display-regular-webfont.ttf"; sourceTree = "<group>"; };
+		BAE065D41B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bunt-display-thin-webfont.ttf"; sourceTree = "<group>"; };
+		BAE065DB1B4DF41700669D6E /* mashtag-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mashtag-Bridging-Header.h"; sourceTree = "<group>"; };
+		BAE065DC1B4DF41800669D6E /* FXLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXLabel.h; sourceTree = "<group>"; };
+		BAE065DD1B4DF41800669D6E /* FXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXLabel.m; sourceTree = "<group>"; };
+		BAE065E01B4DFE7500669D6E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +97,10 @@
 		BACBEC6A1B4DA9FC0032C6CB /* mashtag */ = {
 			isa = PBXGroup;
 			children = (
-				BACBEC901B4DAFE30032C6CB /* Lib */,
+				BACBEC901B4DAFE30032C6CB /* Class */,
 				BACBEC8D1B4DAE340032C6CB /* Util */,
 				BACBEC6D1B4DA9FC0032C6CB /* AppDelegate.swift */,
-				BACBEC6F1B4DA9FC0032C6CB /* ViewController.swift */,
-				BACBEC711B4DA9FC0032C6CB /* Main.storyboard */,
+				BAE065DB1B4DF41700669D6E /* mashtag-Bridging-Header.h */,
 				BACBEC741B4DA9FC0032C6CB /* Images.xcassets */,
 				BACBEC761B4DA9FC0032C6CB /* LaunchScreen.xib */,
 				BACBEC6B1B4DA9FC0032C6CB /* Supporting Files */,
@@ -96,6 +111,10 @@
 		BACBEC6B1B4DA9FC0032C6CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BAE065D11B4DEBAF00669D6E /* bunt-display-light-webfont.ttf */,
+				BAE065D21B4DEBAF00669D6E /* bunt-display-medium-webfont.ttf */,
+				BAE065D31B4DEBAF00669D6E /* bunt-display-regular-webfont.ttf */,
+				BAE065D41B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf */,
 				BACBEC6C1B4DA9FC0032C6CB /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -122,16 +141,22 @@
 			isa = PBXGroup;
 			children = (
 				BACBEC8E1B4DAE4F0032C6CB /* SwiftColors.swift */,
+				BAE065CF1B4DEA1800669D6E /* Util.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
 		};
-		BACBEC901B4DAFE30032C6CB /* Lib */ = {
+		BACBEC901B4DAFE30032C6CB /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				BACBEC911B4DB0110032C6CB /* FAGradientViewController.swift */,
+				BAE065DC1B4DF41800669D6E /* FXLabel.h */,
+				BAE065DD1B4DF41800669D6E /* FXLabel.m */,
+				BACBEC6F1B4DA9FC0032C6CB /* HomeViewController.swift */,
+				BACBEC931B4DDC0C0032C6CB /* HomeViewController.xib */,
+				BACBEC911B4DB0110032C6CB /* GradientViewController.swift */,
+				BAE065E01B4DFE7500669D6E /* CameraViewController.swift */,
 			);
-			name = Lib;
+			name = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +239,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BACBEC731B4DA9FC0032C6CB /* Main.storyboard in Resources */,
+				BAE065D61B4DEBAF00669D6E /* bunt-display-medium-webfont.ttf in Resources */,
+				BAE065D81B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf in Resources */,
 				BACBEC781B4DA9FC0032C6CB /* LaunchScreen.xib in Resources */,
+				BAE065D51B4DEBAF00669D6E /* bunt-display-light-webfont.ttf in Resources */,
 				BACBEC751B4DA9FC0032C6CB /* Images.xcassets in Resources */,
+				BAE065D71B4DEBAF00669D6E /* bunt-display-regular-webfont.ttf in Resources */,
+				BACBEC941B4DDC0C0032C6CB /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,8 +263,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BACBEC701B4DA9FC0032C6CB /* ViewController.swift in Sources */,
-				BACBEC921B4DB0110032C6CB /* FAGradientViewController.swift in Sources */,
+				BAE065DE1B4DF41800669D6E /* FXLabel.m in Sources */,
+				BACBEC701B4DA9FC0032C6CB /* HomeViewController.swift in Sources */,
+				BACBEC921B4DB0110032C6CB /* GradientViewController.swift in Sources */,
+				BAE065D01B4DEA1800669D6E /* Util.swift in Sources */,
+				BAE065E11B4DFE7500669D6E /* CameraViewController.swift in Sources */,
 				BACBEC6E1B4DA9FC0032C6CB /* AppDelegate.swift in Sources */,
 				BACBEC8F1B4DAE500032C6CB /* SwiftColors.swift in Sources */,
 			);
@@ -260,14 +292,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BACBEC711B4DA9FC0032C6CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BACBEC721B4DA9FC0032C6CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BACBEC761B4DA9FC0032C6CB /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -364,9 +388,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = mashtag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mashtag/mashtag-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -374,9 +401,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = mashtag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mashtag/mashtag-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -433,6 +462,7 @@
 				BACBEC891B4DA9FC0032C6CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BACBEC8A1B4DA9FC0032C6CB /* Build configuration list for PBXNativeTarget "mashtagTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +471,7 @@
 				BACBEC8C1B4DA9FC0032C6CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
