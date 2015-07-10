@@ -15,7 +15,9 @@ class HomeViewController: GradientViewController {
     }
 
     @IBAction func createPhotoTap(sender: UIButton) {
-        println("TAP")
+        
+        var camera = CameraViewController(nibName: "CameraViewController", bundle: nil)
+        navigationController?.pushViewController(camera, animated: true)
     }
 
 }

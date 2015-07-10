@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAC452991B4F16BE000B7F90 /* CameraRollViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC452971B4F16BE000B7F90 /* CameraRollViewCell.swift */; };
+		BAC4529A1B4F16BE000B7F90 /* CameraRollViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC452981B4F16BE000B7F90 /* CameraRollViewCell.xib */; };
+		BAC452A11B4F49D0000B7F90 /* StickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4529F1B4F49D0000B7F90 /* StickerViewController.swift */; };
+		BAC452A21B4F49D0000B7F90 /* StickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC452A01B4F49D0000B7F90 /* StickerViewController.xib */; };
 		BACBEC6E1B4DA9FC0032C6CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBEC6D1B4DA9FC0032C6CB /* AppDelegate.swift */; };
 		BACBEC701B4DA9FC0032C6CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACBEC6F1B4DA9FC0032C6CB /* HomeViewController.swift */; };
 		BACBEC751B4DA9FC0032C6CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACBEC741B4DA9FC0032C6CB /* Images.xcassets */; };
@@ -22,6 +26,7 @@
 		BAE065D81B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE065D41B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf */; };
 		BAE065DE1B4DF41800669D6E /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE065DD1B4DF41800669D6E /* FXLabel.m */; };
 		BAE065E11B4DFE7500669D6E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE065E01B4DFE7500669D6E /* CameraViewController.swift */; };
+		BAE065E41B4E002800669D6E /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE065E31B4E002800669D6E /* CameraViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BAC452971B4F16BE000B7F90 /* CameraRollViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRollViewCell.swift; sourceTree = "<group>"; };
+		BAC452981B4F16BE000B7F90 /* CameraRollViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraRollViewCell.xib; sourceTree = "<group>"; };
+		BAC4529F1B4F49D0000B7F90 /* StickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerViewController.swift; sourceTree = "<group>"; };
+		BAC452A01B4F49D0000B7F90 /* StickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickerViewController.xib; sourceTree = "<group>"; };
 		BACBEC681B4DA9FC0032C6CB /* mashtag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mashtag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACBEC6C1B4DA9FC0032C6CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BACBEC6D1B4DA9FC0032C6CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +65,7 @@
 		BAE065DC1B4DF41800669D6E /* FXLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXLabel.h; sourceTree = "<group>"; };
 		BAE065DD1B4DF41800669D6E /* FXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXLabel.m; sourceTree = "<group>"; };
 		BAE065E01B4DFE7500669D6E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		BAE065E31B4E002800669D6E /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +107,10 @@
 		BACBEC6A1B4DA9FC0032C6CB /* mashtag */ = {
 			isa = PBXGroup;
 			children = (
-				BACBEC901B4DAFE30032C6CB /* Class */,
-				BACBEC8D1B4DAE340032C6CB /* Util */,
 				BACBEC6D1B4DA9FC0032C6CB /* AppDelegate.swift */,
+				BAE065E21B4DFFE100669D6E /* Showstopper */,
+				BACBEC901B4DAFE30032C6CB /* Reusable */,
+				BACBEC8D1B4DAE340032C6CB /* Util */,
 				BAE065DB1B4DF41700669D6E /* mashtag-Bridging-Header.h */,
 				BACBEC741B4DA9FC0032C6CB /* Images.xcassets */,
 				BACBEC761B4DA9FC0032C6CB /* LaunchScreen.xib */,
@@ -146,17 +157,29 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
-		BACBEC901B4DAFE30032C6CB /* Class */ = {
+		BACBEC901B4DAFE30032C6CB /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
 				BAE065DC1B4DF41800669D6E /* FXLabel.h */,
 				BAE065DD1B4DF41800669D6E /* FXLabel.m */,
+				BACBEC911B4DB0110032C6CB /* GradientViewController.swift */,
+				BAC452971B4F16BE000B7F90 /* CameraRollViewCell.swift */,
+				BAC452981B4F16BE000B7F90 /* CameraRollViewCell.xib */,
+			);
+			name = Reusable;
+			sourceTree = "<group>";
+		};
+		BAE065E21B4DFFE100669D6E /* Showstopper */ = {
+			isa = PBXGroup;
+			children = (
 				BACBEC6F1B4DA9FC0032C6CB /* HomeViewController.swift */,
 				BACBEC931B4DDC0C0032C6CB /* HomeViewController.xib */,
-				BACBEC911B4DB0110032C6CB /* GradientViewController.swift */,
 				BAE065E01B4DFE7500669D6E /* CameraViewController.swift */,
+				BAE065E31B4E002800669D6E /* CameraViewController.xib */,
+				BAC4529F1B4F49D0000B7F90 /* StickerViewController.swift */,
+				BAC452A01B4F49D0000B7F90 /* StickerViewController.xib */,
 			);
-			name = Class;
+			name = Showstopper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,11 +263,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE065D61B4DEBAF00669D6E /* bunt-display-medium-webfont.ttf in Resources */,
+				BAE065E41B4E002800669D6E /* CameraViewController.xib in Resources */,
 				BAE065D81B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf in Resources */,
+				BAC4529A1B4F16BE000B7F90 /* CameraRollViewCell.xib in Resources */,
 				BACBEC781B4DA9FC0032C6CB /* LaunchScreen.xib in Resources */,
 				BAE065D51B4DEBAF00669D6E /* bunt-display-light-webfont.ttf in Resources */,
 				BACBEC751B4DA9FC0032C6CB /* Images.xcassets in Resources */,
 				BAE065D71B4DEBAF00669D6E /* bunt-display-regular-webfont.ttf in Resources */,
+				BAC452A21B4F49D0000B7F90 /* StickerViewController.xib in Resources */,
 				BACBEC941B4DDC0C0032C6CB /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,10 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC452A11B4F49D0000B7F90 /* StickerViewController.swift in Sources */,
 				BAE065DE1B4DF41800669D6E /* FXLabel.m in Sources */,
 				BACBEC701B4DA9FC0032C6CB /* HomeViewController.swift in Sources */,
 				BACBEC921B4DB0110032C6CB /* GradientViewController.swift in Sources */,
 				BAE065D01B4DEA1800669D6E /* Util.swift in Sources */,
+				BAC452991B4F16BE000B7F90 /* CameraRollViewCell.swift in Sources */,
 				BAE065E11B4DFE7500669D6E /* CameraViewController.swift in Sources */,
 				BACBEC6E1B4DA9FC0032C6CB /* AppDelegate.swift in Sources */,
 				BACBEC8F1B4DAE500032C6CB /* SwiftColors.swift in Sources */,
