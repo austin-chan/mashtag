@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="cameraRollCollectionView" destination="3up-Ew-RcS" id="tsm-ey-ceF"/>
                 <outlet property="flashButton" destination="zSQ-gN-xBl" id="tlO-ra-jy5"/>
+                <outlet property="imagePickerButton" destination="dAX-qb-gIz" id="UDc-wx-N7v"/>
                 <outlet property="innerCameraButton" destination="Wuj-gk-kbZ" id="GdJ-ol-6a0"/>
                 <outlet property="mostRecentImageView" destination="Vk0-oZ-nR2" id="w9b-e0-Yhy"/>
                 <outlet property="outerCameraButton" destination="v0t-H4-bRH" id="hDK-do-cbn"/>
@@ -175,17 +176,34 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azK-0C-Mtk" userLabel="[Left Area]">
                                     <rect key="frame" x="0.0" y="0.0" width="117" height="92"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vk0-oZ-nR2" userLabel="Most Recent Image View">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vk0-oZ-nR2" userLabel="Image Picker Image View">
                                             <rect key="frame" x="31" y="19" width="54" height="54"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="54" id="XqA-YY-B45"/>
                                                 <constraint firstAttribute="width" constant="54" id="xtR-de-Bxh"/>
                                             </constraints>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAX-qb-gIz" userLabel="Image Picker Button">
+                                            <rect key="frame" x="31" y="19" width="54" height="54"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="54" id="LqD-QZ-QZk"/>
+                                                <constraint firstAttribute="height" constant="54" id="g1s-v6-rm8"/>
+                                            </constraints>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="imagePickerTap:" destination="-1" eventType="touchUpInside" id="7fg-x8-J1P"/>
+                                                <action selector="imagePickerTapDown:" destination="-1" eventType="touchDown" id="Iu5-MA-Avh"/>
+                                                <action selector="imagePickerTapUp:" destination="-1" eventType="touchUpOutside" id="K71-fi-BQO"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="centerX" secondItem="Vk0-oZ-nR2" secondAttribute="centerX" id="0Fd-Vc-1kZ"/>
                                         <constraint firstAttribute="centerY" secondItem="Vk0-oZ-nR2" secondAttribute="centerY" id="YoF-z0-LGT"/>
+                                        <constraint firstAttribute="centerY" secondItem="dAX-qb-gIz" secondAttribute="centerY" id="kic-yY-10j"/>
+                                        <constraint firstAttribute="centerX" secondItem="dAX-qb-gIz" secondAttribute="centerX" id="oRi-aj-BrD"/>
                                     </constraints>
                                 </view>
                             </subviews>

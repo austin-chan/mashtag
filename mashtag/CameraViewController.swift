@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Photos
 
-class CameraViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class CameraViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // IBOutlets
     @IBOutlet weak var innerCameraButton: UIView!
@@ -18,6 +18,7 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var mostRecentImageView: UIImageView!
     @IBOutlet weak var cameraRollCollectionView: UICollectionView!
     @IBOutlet weak var flashButton: UIButton!
+    @IBOutlet weak var imagePickerButton: UIButton!
 
     // Camera Properties
     let captureSession = AVCaptureSession()
@@ -165,7 +166,11 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     // Crops image into a square and reverses the image if taken by front camera
     // http://carl-thomas.name/crop-image-to-square/
-    func editCameraCapture(originalImage: UIImage) -> UIImage {
+    func editCameraCapture(image: UIImage) -> UIImage {
+        return generateMiddleCrop(image, orientation: backInputActive ? image.imageOrientation : .LeftMirrored)
+    }
+
+    func generateMiddleCrop(originalImage: UIImage, orientation: UIImageOrientation) -> UIImage {
         let contextImage: UIImage = UIImage(CGImage: originalImage.CGImage)!
         let contextSize: CGSize = contextImage.size
 
@@ -187,9 +192,10 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
 
         let rect: CGRect = CGRectMake(posX, posY, width, height)
         let imageRef: CGImageRef = CGImageCreateWithImageInRect(contextImage.CGImage, rect)
-        let image: UIImage = UIImage(CGImage: imageRef, scale: originalImage.scale, orientation: backInputActive ? originalImage.imageOrientation : .LeftMirrored)!
+        let image: UIImage = UIImage(CGImage: imageRef, scale: originalImage.scale, orientation: orientation)!
 
         return image
+
     }
 
 
@@ -214,10 +220,6 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
         var i: UIImage? = nil
         let imgManager = PHImageManager.defaultManager()
 
-        // Note that if the request is not set to synchronous
-        // the requestImageForAsset will return both the image
-        // and thumbnail; by setting synchronous to true it
-        // will return just the thumbnail
         var requestOptions = PHImageRequestOptions()
         requestOptions.synchronous = true
 
@@ -258,6 +260,37 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
         return CGSizeMake(heightOfCameraRoll, heightOfCameraRoll)
     }
 
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        var i: UIImage? = nil
+        let imgManager = PHImageManager.defaultManager()
+
+        var requestOptions = PHImageRequestOptions()
+
+        if let assets = fetchedAssets {
+            imgManager.requestImageDataForAsset(assets.objectAtIndex(assets.count - 1 - indexPath.row) as! PHAsset, options: requestOptions, resultHandler: { (data, str, orientation, info) -> Void in
+                let image = UIImage(data: data)!
+                self.startStickerStep(self.generateMiddleCrop(image, orientation: image.imageOrientation))
+            })
+        }
+    }
+
+
+    // MARK: UIImagePickerControllerDelegate Methods
+
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        setStatusBarVisible()
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        setStatusBarVisible()
+        dismissViewControllerAnimated(true, completion: nil)
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
+        Util.delay(0, closure: {
+            self.startStickerStep(image)
+        })
+    }
+
 
     // MARK: UI Manipulation
 
@@ -273,10 +306,20 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
         outerCameraButton.layer.borderWidth = 4
         outerCameraButton.layer.borderColor = UIColor(hexString: "#4A6491")?.CGColor
 
+        imagePickerButton.layer.cornerRadius = 6
+        let shadowPath = UIBezierPath(rect: imagePickerButton.bounds)
+        imagePickerButton.layer.masksToBounds = false
+        imagePickerButton.layer.shadowColor = UIColor(hexString: "#000000", alpha: 0.3)?.CGColor
+        imagePickerButton.layer.shadowOpacity = 0.8
+        imagePickerButton.layer.shadowRadius = 2
+        imagePickerButton.layer.shadowOffset = CGSizeMake(0, 0)
+        imagePickerButton.layer.shadowPath = shadowPath.CGPath
+
         mostRecentImageView.layer.cornerRadius = 6
         mostRecentImageView.clipsToBounds = true
         if let image = fetchMostRecentPhoto() {
             mostRecentImageView.image = image
+            mostRecentImageView.contentMode = UIViewContentMode.ScaleAspectFill
         }
 
         cameraRollCollectionView.registerNib(UINib(nibName: "CameraRollViewCell", bundle: nil), forCellWithReuseIdentifier: cameraRollReuseIdentifier)
@@ -321,6 +364,19 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
         setFlash(!flashActive)
     }
 
+    @IBAction func imagePickerTap(sender: UIButton) {
+        imagePickerButtonChangeColor(false)
+        startImagePicker()
+    }
+
+    @IBAction func imagePickerTapDown(sender: UIButton) {
+        imagePickerButtonChangeColor(true)
+    }
+
+    @IBAction func imagePickerTapUp(sender: UIButton) {
+        imagePickerButtonChangeColor(false)
+    }
+
     func setFlash(active: Bool) {
         flashActive = active
         let filled = UIImage(named: "icon-flash-fill")
@@ -337,7 +393,6 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
     func drawFocusMarker(point: CGPoint) {
         if let oldMarker = activeFocusMarker {
             oldMarker.removeFromSuperview()
-            println("HI")
         }
         var markerView = UIImageView(image: UIImage(named: "icon-focus-marker"))
         let markerHeight: CGFloat = 52
@@ -350,7 +405,7 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
             markerView.alpha = 0.65
         }, completion: nil)
 
-        Util.delay(0.4, closure: {
+        Util.delay(0.5, closure: {
             if markerView.superview != nil {
                 markerView.removeFromSuperview()
                 self.activeFocusMarker = nil
@@ -370,6 +425,41 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
                 self.innerCameraButton.backgroundColor = innerCameraButtonColor
             }
             }, completion: nil)
+    }
+
+    func imagePickerButtonChangeColor(tap: Bool) {
+        let imagePickerButtonColor = UIColor(hexString: "#000000", alpha: 0)
+        let imagePickerButtonTapColor = UIColor(hexString: "#000000", alpha: 0.55)
+
+        UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.5, options: nil, animations: {
+            if tap {
+                self.imagePickerButton.backgroundColor = imagePickerButtonTapColor
+            } else {
+                self.imagePickerButton.backgroundColor = imagePickerButtonColor
+            }
+            }, completion: nil)
+    }
+
+    func setStatusBarVisible() {
+        Util.delay(0, closure: {
+            UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.Slide)
+            UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        })
+    }
+
+    func setStatusBarHidden() {
+        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.Slide)
+    }
+
+    func startImagePicker() {
+        var imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        imagePicker.delegate = self
+        Util.delay(0.2, closure: {
+            self.setStatusBarHidden()
+        })
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
 
     func startStickerStep(image: UIImage) {

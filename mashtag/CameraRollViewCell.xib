@@ -15,17 +15,26 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lf8-zJ-crb">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rje-vY-7bQ" userLabel="Screen">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
                 <constraint firstItem="lf8-zJ-crb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3Um-uI-UZK"/>
                 <constraint firstItem="lf8-zJ-crb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4Lt-6B-PWF"/>
+                <constraint firstItem="Rje-vY-7bQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="EHf-tW-OCU"/>
+                <constraint firstAttribute="trailing" secondItem="Rje-vY-7bQ" secondAttribute="trailing" id="Gn7-O4-qDD"/>
                 <constraint firstAttribute="bottom" secondItem="lf8-zJ-crb" secondAttribute="bottom" id="Li4-7a-ZnH"/>
+                <constraint firstAttribute="bottom" secondItem="Rje-vY-7bQ" secondAttribute="bottom" id="Ruf-Ar-m7r"/>
                 <constraint firstAttribute="trailing" secondItem="lf8-zJ-crb" secondAttribute="trailing" id="vLI-uP-F35"/>
+                <constraint firstItem="Rje-vY-7bQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vn6-UT-Tfj"/>
             </constraints>
             <connections>
                 <outlet property="imageView" destination="lf8-zJ-crb" id="xQu-9n-P5n"/>
+                <outlet property="screenView" destination="Rje-vY-7bQ" id="Ibt-pI-YMT"/>
             </connections>
         </collectionViewCell>
     </objects>
