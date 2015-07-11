@@ -291,7 +291,6 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
         })
     }
 
-
     // MARK: UI Manipulation
 
 
@@ -306,7 +305,6 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
         outerCameraButton.layer.borderWidth = 4
         outerCameraButton.layer.borderColor = UIColor(hexString: "#4A6491")?.CGColor
 
-        imagePickerButton.layer.cornerRadius = 6
         let shadowPath = UIBezierPath(rect: imagePickerButton.bounds)
         imagePickerButton.layer.masksToBounds = false
         imagePickerButton.layer.shadowColor = UIColor(hexString: "#000000", alpha: 0.3)?.CGColor
@@ -315,7 +313,6 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
         imagePickerButton.layer.shadowOffset = CGSizeMake(0, 0)
         imagePickerButton.layer.shadowPath = shadowPath.CGPath
 
-        mostRecentImageView.layer.cornerRadius = 6
         mostRecentImageView.clipsToBounds = true
         if let image = fetchMostRecentPhoto() {
             mostRecentImageView.image = image

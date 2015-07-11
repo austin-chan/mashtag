@@ -35,7 +35,7 @@ class CameraRollViewCell: UICollectionViewCell {
     }
 
     func darken() {
-        let dark = UIColor(hexString: "#000000", alpha: 0.54)
+        let dark = UIColor(hexString: "#000000", alpha: 0.45)
         UIView.animateWithDuration(0.18, animations: {
             self.screenView.backgroundColor = dark
         })
