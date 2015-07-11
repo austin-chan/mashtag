@@ -10,6 +10,9 @@
 		BA471A9C1B50A6F6003C1CBA /* DesignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA471A9B1B50A6F6003C1CBA /* DesignButton.swift */; };
 		BA839B151B50D62700A7DC64 /* StickerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA839B131B50D62700A7DC64 /* StickerViewCell.swift */; };
 		BA839B161B50D62700A7DC64 /* StickerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA839B141B50D62700A7DC64 /* StickerViewCell.xib */; };
+		BA839B191B51C14D00A7DC64 /* FinalizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA839B171B51C14D00A7DC64 /* FinalizeViewController.swift */; };
+		BA839B1A1B51C14D00A7DC64 /* FinalizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA839B181B51C14D00A7DC64 /* FinalizeViewController.xib */; };
+		BA839B1C1B51C52C00A7DC64 /* DesignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA839B1B1B51C52C00A7DC64 /* DesignLabel.swift */; };
 		BAC452991B4F16BE000B7F90 /* CameraRollViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC452971B4F16BE000B7F90 /* CameraRollViewCell.swift */; };
 		BAC4529A1B4F16BE000B7F90 /* CameraRollViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC452981B4F16BE000B7F90 /* CameraRollViewCell.xib */; };
 		BAC452A11B4F49D0000B7F90 /* StickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4529F1B4F49D0000B7F90 /* StickerViewController.swift */; };
@@ -46,6 +49,9 @@
 		BA471A9B1B50A6F6003C1CBA /* DesignButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignButton.swift; sourceTree = "<group>"; };
 		BA839B131B50D62700A7DC64 /* StickerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerViewCell.swift; sourceTree = "<group>"; };
 		BA839B141B50D62700A7DC64 /* StickerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickerViewCell.xib; sourceTree = "<group>"; };
+		BA839B171B51C14D00A7DC64 /* FinalizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalizeViewController.swift; sourceTree = "<group>"; };
+		BA839B181B51C14D00A7DC64 /* FinalizeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinalizeViewController.xib; sourceTree = "<group>"; };
+		BA839B1B1B51C52C00A7DC64 /* DesignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignLabel.swift; sourceTree = "<group>"; };
 		BAC452971B4F16BE000B7F90 /* CameraRollViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraRollViewCell.swift; sourceTree = "<group>"; };
 		BAC452981B4F16BE000B7F90 /* CameraRollViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraRollViewCell.xib; sourceTree = "<group>"; };
 		BAC4529F1B4F49D0000B7F90 /* StickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 			children = (
 				BAE065DC1B4DF41800669D6E /* FXLabel.h */,
 				BAE065DD1B4DF41800669D6E /* FXLabel.m */,
+				BA839B1B1B51C52C00A7DC64 /* DesignLabel.swift */,
 				BA471A9B1B50A6F6003C1CBA /* DesignButton.swift */,
 				BACBEC911B4DB0110032C6CB /* GradientViewController.swift */,
 				BAC452971B4F16BE000B7F90 /* CameraRollViewCell.swift */,
@@ -187,6 +194,8 @@
 				BAE065E31B4E002800669D6E /* CameraViewController.xib */,
 				BAC4529F1B4F49D0000B7F90 /* StickerViewController.swift */,
 				BAC452A01B4F49D0000B7F90 /* StickerViewController.xib */,
+				BA839B171B51C14D00A7DC64 /* FinalizeViewController.swift */,
+				BA839B181B51C14D00A7DC64 /* FinalizeViewController.xib */,
 			);
 			name = Showstopper;
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 				BAE065D51B4DEBAF00669D6E /* bunt-display-light-webfont.ttf in Resources */,
 				BACBEC751B4DA9FC0032C6CB /* Images.xcassets in Resources */,
 				BAE065D71B4DEBAF00669D6E /* bunt-display-regular-webfont.ttf in Resources */,
+				BA839B1A1B51C14D00A7DC64 /* FinalizeViewController.xib in Resources */,
 				BAC452A21B4F49D0000B7F90 /* StickerViewController.xib in Resources */,
 				BA839B161B50D62700A7DC64 /* StickerViewCell.xib in Resources */,
 				BACBEC941B4DDC0C0032C6CB /* HomeViewController.xib in Resources */,
@@ -303,9 +313,11 @@
 				BAC452A11B4F49D0000B7F90 /* StickerViewController.swift in Sources */,
 				BAE065DE1B4DF41800669D6E /* FXLabel.m in Sources */,
 				BACBEC701B4DA9FC0032C6CB /* HomeViewController.swift in Sources */,
+				BA839B191B51C14D00A7DC64 /* FinalizeViewController.swift in Sources */,
 				BA471A9C1B50A6F6003C1CBA /* DesignButton.swift in Sources */,
 				BACBEC921B4DB0110032C6CB /* GradientViewController.swift in Sources */,
 				BAE065D01B4DEA1800669D6E /* Util.swift in Sources */,
+				BA839B1C1B51C52C00A7DC64 /* DesignLabel.swift in Sources */,
 				BAC452991B4F16BE000B7F90 /* CameraRollViewCell.swift in Sources */,
 				BAE065E11B4DFE7500669D6E /* CameraViewController.swift in Sources */,
 				BACBEC6E1B4DA9FC0032C6CB /* AppDelegate.swift in Sources */,

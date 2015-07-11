@@ -154,7 +154,10 @@ INTO YOUR PHOTOS </string>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="7uw-Hl-h4m"/>
                     <exclude reference="PH5-PT-J38"/>
+                    <exclude reference="jWN-1i-5Wm"/>
+                    <exclude reference="v2o-tq-nBy"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="30" y="275"/>

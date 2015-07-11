@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StickerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class StickerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate {
 
     // IBOutlets
     @IBOutlet weak var overlayImageView: UIImageView!
@@ -20,9 +20,10 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
     var overlayImage: UIImage?
     var stickerCollectionHeight: CGFloat = Util.screenSize.height - (Util.screenSize.width + 64) - (20 + 30)
     let stickerCollectionReuseIdentifier = "StickerViewCell"
+    var activeSticker: UIImageView!
 
     // Sticker Properties
-    var stickers = [("jaden-smith", 1), ("jaden-smith", 1), ("jaden-smith", 1)]
+    var stickers = [("jaden-smith", 1)]
     var stickerCoverSizes: Array<CGSize> = []
 
     override func viewDidLoad() {
@@ -39,6 +40,16 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
             let image = UIImage(named: str + "-cover")!
             stickerCoverSizes.append(image.size)
         }
+    }
+
+    func generateScreenshot() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(Util.screenSize.width, Util.screenSize.width), false, 0);
+        self.view.drawViewHierarchyInRect(CGRectMake(0, -64, Util.screenSize.width, Util.screenSize.height), afterScreenUpdates: true)
+        var image: UIImage = UIGraphicsGetImageFromCurrentImageContext();
+
+        UIGraphicsEndImageContext();
+
+        return image
     }
 
     // MARK: UICollectionView Methods
@@ -74,12 +85,31 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
         imageView.userInteractionEnabled = true
 
         let pan = UIPanGestureRecognizer(target: self, action: "handlePan:")
+        pan.delegate = self
         imageView.addGestureRecognizer(pan)
         let pinch = UIPinchGestureRecognizer(target: self, action: "handlePinch:")
+        pinch.delegate = self
         imageView.addGestureRecognizer(pinch)
+        let rotation = UIRotationGestureRecognizer(target: self, action: "handleRotation:")
+        rotation.delegate = self
+        imageView.addGestureRecognizer(rotation)
+
+        if activeSticker != nil {
+            activeSticker.removeFromSuperview()
+        }
 
         canvas.addSubview(imageView)
+        activeSticker = imageView
+
+        positionSticker()
+        activeSticker.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        activeSticker.alpha = 0.7
+        UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 10, options: nil, animations: {
+            self.positionSticker()
+            self.activeSticker.alpha = 1
+        }, completion: nil)
     }
+
 
     // MARK: Gesture Recognizers
 
@@ -104,6 +134,19 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
         }
     }
 
+    func handleRotation(recognizer: UIRotationGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = CGAffineTransformRotate(view.transform, recognizer.rotation)
+            recognizer.rotation = 0
+        }
+    }
+
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+
+
+
     // MARK: UI Methods
 
     func render() {
@@ -113,8 +156,34 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
         analyzeStickerData()
     }
 
+    func positionSticker() {
+        let image = activeSticker.image!
+        activeSticker.center = CGPointMake(canvas.frame.width / 2, canvas.frame.height - (image.size.height / 2) + 20)
+        activeSticker.transform = CGAffineTransformIdentity
+    }
+
     @IBAction func backTap(sender: UIButton) {
         navigationController?.popViewControllerAnimated(false)
+    }
+
+    @IBAction func resetPositionTap(sender: UIButton) {
+        if activeSticker == nil {
+            return
+        }
+
+        UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 8, options: nil, animations: {
+            self.positionSticker()
+        }, completion: nil)
+    }
+
+    @IBAction func nextTap(sender: UIButton) {
+        startFinalStep()
+    }
+
+    func startFinalStep() {
+        var finalStep: FinalizeViewController = FinalizeViewController(nibName: "FinalizeViewController", bundle: nil)
+        finalStep.image = generateScreenshot()
+        navigationController?.pushViewController(finalStep, animated: true)
     }
 
 }
