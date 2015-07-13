@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="mashtag" customModuleProvider="target">
             <connections>
+                <outlet property="startButton" destination="kbw-Le-KG9" id="kyn-0j-PwO"/>
                 <outlet property="view" destination="aLe-zt-ias" id="WNU-Rm-QpL"/>
             </connections>
         </placeholder>

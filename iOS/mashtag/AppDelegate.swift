@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
     var animator = Animator()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        loadDefaultPreferences()
+
         UIApplication.sharedApplication().statusBarStyle = .LightContent
 
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -36,6 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         animator.presenting = operation == UINavigationControllerOperation.Push ? true : false
         return animator
+    }
+
+    func loadDefaultPreferences() {
+        NSUserDefaults.standardUserDefaults().registerDefaults(["authorized": false])
     }
 
     func applicationWillResignActive(application: UIApplication) {
