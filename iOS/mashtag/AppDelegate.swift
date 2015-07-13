@@ -15,8 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
     var animator = Animator()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        loadDefaultPreferences()
-
         UIApplication.sharedApplication().statusBarStyle = .LightContent
 
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -40,26 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
         return animator
     }
 
-    func loadDefaultPreferences() {
-        NSUserDefaults.standardUserDefaults().registerDefaults(["authorized": false])
+    func application(application: UIApplication, supportedInterfaceOrientationsForWindow window: UIWindow?) -> Int {
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
     }
-
-    func applicationWillResignActive(application: UIApplication) {
-    }
-
-    func applicationDidEnterBackground(application: UIApplication) {
-    }
-
-    func applicationWillEnterForeground(application: UIApplication) {
-    }
-
-    func applicationDidBecomeActive(application: UIApplication) {
-    }
-
-    func applicationWillTerminate(application: UIApplication) {
-    }
-
-
 
 }
 

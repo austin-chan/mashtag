@@ -28,7 +28,6 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         render()
     }
 

@@ -136,7 +136,7 @@
                         <outlet property="delegate" destination="-1" id="sCL-c4-YBA"/>
                     </connections>
                 </collectionView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT A FIGURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M27-H0-wvF" userLabel="CollectionViewLabel" customClass="FXLabel">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT A FIGURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M27-H0-wvF" userLabel="CollectionViewLabel" customClass="DesignLabel" customModule="mashtag" customModuleProvider="target">
                     <rect key="frame" x="85" y="390" width="150" height="15.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="HlT-bM-SNP"/>
@@ -146,7 +146,7 @@
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
-                            <real key="value" value="0.34999999999999998"/>
+                            <real key="value" value="2.7999999999999998"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </label>

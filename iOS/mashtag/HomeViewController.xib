@@ -27,27 +27,27 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwt-hV-onQ" userLabel="Logo Wrap">
                             <rect key="frame" x="0.0" y="69" width="320" height="250"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MASHTAG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMs-fh-tBS" customClass="FXLabel">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MASHTAG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMs-fh-tBS" customClass="DesignLabel" customModule="mashtag" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="160.5" width="320" height="41"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                     <color key="textColor" red="0.52156862745098043" green="0.6470588235294118" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
-                                            <real key="value" value="0.20000000000000001"/>
+                                            <real key="value" value="4.9000000000000004"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-1N-gkH" customClass="FXLabel">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-1N-gkH" customClass="DesignLabel" customModule="mashtag" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="205.5" width="320" height="42.5"/>
-                                    <string key="text">SHOP’ HUMUROUS PUBLIC FIGURES
-INTO YOUR PHOTOS </string>
+                                    <string key="text">ADD FAMOUS FIGURES
+TO YOUR PHOTOS </string>
                                     <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
                                     <color key="textColor" red="0.52156862745098043" green="0.6470588235294118" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
-                                            <real key="value" value="0.10000000000000001"/>
+                                            <real key="value" value="1.8"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </label>

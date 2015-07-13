@@ -12,6 +12,7 @@ import Photos
 
 class HomeViewController: GradientViewController  {
 
+    // IBOutlets
     @IBOutlet weak var startButton: DesignButton!
 
     // Returns 0 if all access is granted, 1 if user has not been asked, and 2 if they have denied
@@ -49,21 +50,26 @@ class HomeViewController: GradientViewController  {
         }
     }
 
+    // MARK: UI Methods
+
     @IBAction func createPhotoTap(sender: UIButton) {
         switch permissionAccess {
         case 0:
-            var camera = CameraViewController(nibName: "CameraViewController", bundle: nil)
-            navigationController?.pushViewController(camera, animated: true)
-
             // make sure button label is correct
             startButton.titleLabel?.text = "CREATE PHOTO"
             startButton.setup()
+
+            var camera = CameraViewController(nibName: "CameraViewController", bundle: nil)
+            navigationController?.pushViewController(camera, animated: true)
         case 1:
             AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo, completionHandler: nil)
             PHPhotoLibrary.requestAuthorization({ (status) -> Void in
                 if self.permissionAccess == 0 {
                     // rerun method to proceed
-                    self.createPhotoTap(sender)
+
+                    Util.delay(0, closure: {
+                        self.createPhotoTap(sender)
+                    })
                 }
             })
         default:

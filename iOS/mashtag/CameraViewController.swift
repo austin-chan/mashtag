@@ -52,7 +52,6 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     // MARK: Camera Setup
 
-
     func prepareCamera() {
         captureSession.sessionPreset = AVCaptureSessionPresetHigh
 
@@ -153,7 +152,9 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
         previewLayer?.frame = CGRectMake(0, 0, Util.screenSize.width, 64 * 2 + Util.screenSize.width)
         previewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill;
         view.layer.addSublayer(previewLayer)
-        captureSession.startRunning()
+        Util.delay(0.4, closure: {
+            self.captureSession.startRunning()
+        })
     }
 
     func captureCamera() {
@@ -205,7 +206,6 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     // MARK: Camera Roll Setup
 
-
     func prepareCameraRoll() {
         // Sort the images by creation date
         var fetchOptions = PHFetchOptions()
@@ -239,10 +239,7 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
         return i
     }
 
-
-
-    // MARK: UICollectionView Methods
-
+    // MARK: UICollectionView Methods (#collectionview)
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let assets = fetchedAssets {
@@ -279,7 +276,7 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
 
 
-    // MARK: UIImagePickerControllerDelegate Methods
+    // MARK: UIImagePickerControllerDelegate Methods (#imagepicker)
 
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         setStatusBarVisible()
@@ -295,48 +292,7 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
         })
     }
 
-    // MARK: UI Manipulation
-
-
-    /// Prepares the UI Elements of the Camera Screen
-    func render() {
-        let innerCameraButtonHeight: CGFloat = 64
-        let outerCameraButtonHeight: CGFloat = 86
-
-        innerCameraButton.layer.cornerRadius = innerCameraButtonHeight/2
-
-        outerCameraButton.layer.cornerRadius = outerCameraButtonHeight/2
-        outerCameraButton.layer.borderWidth = 4
-        outerCameraButton.layer.borderColor = UIColor(hexString: "#4A6491")?.CGColor
-
-        let shadowPath = UIBezierPath(rect: imagePickerButton.bounds)
-        imagePickerButton.layer.masksToBounds = false
-        imagePickerButton.layer.shadowColor = UIColor(hexString: "#000000", alpha: 0.3)?.CGColor
-        imagePickerButton.layer.shadowOpacity = 0.8
-        imagePickerButton.layer.shadowRadius = 2
-        imagePickerButton.layer.shadowOffset = CGSizeMake(0, 0)
-        imagePickerButton.layer.shadowPath = shadowPath.CGPath
-
-        mostRecentImageView.clipsToBounds = true
-        if let image = fetchMostRecentPhoto() {
-            mostRecentImageView.image = image
-            mostRecentImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        }
-
-        cameraRollCollectionView.registerNib(UINib(nibName: "CameraRollViewCell", bundle: nil), forCellWithReuseIdentifier: cameraRollReuseIdentifier)
-
-        heightOfCameraRoll = cameraRollCollectionView.frame.size.height
-
-        handlePrimitiveDevice()
-    }
-
-    func handlePrimitiveDevice() {
-        if Util.isPrimitiveDevice {
-            bottomHalf.removeConstraint(bottomHalfConstraintTop)
-            bottomArea.addConstraint(NSLayoutConstraint(item: bottomHalf, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: bottomArea, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0))
-            topHalf.removeFromSuperview()
-        }
-    }
+    // MARK: IBActions (#ibaction)
 
     @IBAction func cameraTap(sender: UIButton) {
         innerCameraButtonChangeColor(false)
@@ -386,6 +342,50 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     @IBAction func imagePickerTapUp(sender: UIButton) {
         imagePickerButtonChangeColor(false)
+    }
+
+
+    // MARK: UI Methods (#uimethods)
+
+
+    /// Prepares the UI Elements of the Camera Screen
+    func render() {
+        let innerCameraButtonHeight: CGFloat = 64
+        let outerCameraButtonHeight: CGFloat = 86
+
+        innerCameraButton.layer.cornerRadius = innerCameraButtonHeight/2
+
+        outerCameraButton.layer.cornerRadius = outerCameraButtonHeight/2
+        outerCameraButton.layer.borderWidth = 4
+        outerCameraButton.layer.borderColor = UIColor(hexString: "#4A6491")?.CGColor
+
+        let shadowPath = UIBezierPath(rect: imagePickerButton.bounds)
+        imagePickerButton.layer.masksToBounds = false
+        imagePickerButton.layer.shadowColor = UIColor(hexString: "#000000", alpha: 0.3)?.CGColor
+        imagePickerButton.layer.shadowOpacity = 0.8
+        imagePickerButton.layer.shadowRadius = 2
+        imagePickerButton.layer.shadowOffset = CGSizeMake(0, 0)
+        imagePickerButton.layer.shadowPath = shadowPath.CGPath
+
+        mostRecentImageView.clipsToBounds = true
+        if let image = fetchMostRecentPhoto() {
+            mostRecentImageView.image = image
+            mostRecentImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        }
+
+        cameraRollCollectionView.registerNib(UINib(nibName: "CameraRollViewCell", bundle: nil), forCellWithReuseIdentifier: cameraRollReuseIdentifier)
+
+        heightOfCameraRoll = cameraRollCollectionView.frame.size.height
+
+        handlePrimitiveDevice()
+    }
+
+    func handlePrimitiveDevice() {
+        if Util.isPrimitiveDevice {
+            bottomHalf.removeConstraint(bottomHalfConstraintTop)
+            bottomArea.addConstraint(NSLayoutConstraint(item: bottomHalf, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: bottomArea, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0))
+            topHalf.removeFromSuperview()
+        }
     }
 
     func setFlash(active: Bool) {
