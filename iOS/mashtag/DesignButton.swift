@@ -5,18 +5,25 @@
 //  Created by Austin Chan on 7/10/15.
 //  Copyright (c) 2015 Awoes. All rights reserved.
 //
+//  Lovingly from 🇺🇸
+//  ❤️🍻☺️, 💣🔫😭
+//
 
 import UIKit
 
-// UIButton subclass that supports changing letter spacing in Interface Builder. Very useful!
+/// A button that supports setting the label text kerning from Interface Builder.
 class DesignButton: UIButton {
 
+    /// The letter spacing value for the label text.
     var characterSpacing: NSNumber?
 
     override func awakeFromNib() {
         setup()
     }
 
+    /**
+        Re-renders the button with the settings supplied
+    */
     func setup() {
         if characterSpacing != nil && characterSpacing != 0 {
             var string = titleLabel?.text!
@@ -27,10 +34,6 @@ class DesignButton: UIButton {
                 self.layoutIfNeeded()
             })
         }
-    }
-
-    override func setTitle(title: String?, forState state: UIControlState) {
-        super.setTitle(title, forState: state)
     }
 
 }

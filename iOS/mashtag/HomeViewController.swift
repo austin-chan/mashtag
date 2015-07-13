@@ -5,6 +5,9 @@
 //  Created by Austin Chan on 7/8/15.
 //  Copyright (c) 2015 Awoes. All rights reserved.
 //
+//  Lovingly from 🇺🇸
+//  ❤️🍻☺️, 💣🔫😭
+//
 
 import UIKit;
 import AVFoundation

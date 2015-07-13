@@ -5,6 +5,9 @@
 //  Created by Austin Chan on 7/12/15.
 //  Copyright (c) 2015 Fiftyawoe. All rights reserved.
 //
+//  Lovingly from 🇺🇸
+//  ❤️🍻☺️, 💣🔫😭
+//
 
 import UIKit
 
@@ -21,9 +24,6 @@ class Animator: NSObject, UIViewControllerAnimatedTransitioning {
         var fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
         let finalFrame = transitionContext.finalFrameForViewController(toViewController)
         let initialFrame = transitionContext.initialFrameForViewController(toViewController)
-
-//        println(initialFrame)
-//        println(finalFrame)
 
         let duration = self.transitionDuration(transitionContext)
 

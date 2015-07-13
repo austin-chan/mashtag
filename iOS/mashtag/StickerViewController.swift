@@ -5,6 +5,9 @@
 //  Created by Austin Chan on 7/9/15.
 //  Copyright (c) 2015 Awoes. All rights reserved.
 //
+//  Lovingly from 🇺🇸
+//  ❤️🍻☺️, 💣🔫😭
+//
 
 import UIKit
 
@@ -31,7 +34,7 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
         render()
     }
 
-    // MARK: Image Data Methods
+    // MARK: Image Data Methods (#image)
 
     func analyzeStickerData() {
         for sticker in stickers {
@@ -51,7 +54,7 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
         return image
     }
 
-    // MARK: UICollectionView Methods
+    // MARK: UICollectionView Methods (#collectionview)
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return stickers.count
@@ -110,7 +113,7 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 
 
-    // MARK: Gesture Recognizers
+    // MARK: Gesture Recognizers (#gesture)
 
     func handlePan(recognizer: UIPanGestureRecognizer) {
         let translation = recognizer.translationInView(self.view)
@@ -144,9 +147,7 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
         return true
     }
 
-
-
-    // MARK: UI Methods
+    // MARK: UI Methods (#uimethods)
 
     func render() {
         overlayImageView.image = overlayImage

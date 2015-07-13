@@ -5,6 +5,9 @@
 //  Created by Austin Chan on 7/8/15.
 //  Copyright (c) 2015 Awoes. All rights reserved.
 //
+//  Lovingly from 🇺🇸
+//  ❤️🍻☺️, 💣🔫😭
+//
 
 import UIKit
 import AVFoundation
@@ -50,7 +53,7 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
         render()
     }
 
-    // MARK: Camera Setup
+    // MARK: Camera Methods (#camera)
 
     func prepareCamera() {
         captureSession.sessionPreset = AVCaptureSessionPresetHigh
@@ -204,7 +207,7 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
 
 
-    // MARK: Camera Roll Setup
+    // MARK: Camera Roll Methods (#cameraroll, #gallery)
 
     func prepareCameraRoll() {
         // Sort the images by creation date

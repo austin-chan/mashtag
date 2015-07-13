@@ -3,19 +3,27 @@
 //  Mashtag
 //
 //  Created by Austin Chan on 7/11/15.
-//  Copyright (c) 2015 Awoes. All rights reserved.
+//  Copyright © 2015 Awoes, Inc. All rights reserved.
+//
+//  Lovingly from 🇺🇸
+//  ❤️🍻☺️, 💣🔫😭
 //
 
 import UIKit
 
+/// A label that supports setting the label text kerning from Interface Builder.
 class DesignLabel: UILabel {
 
+    /// The letter spacing value for the label text.
     var characterSpacing: NSNumber!
 
     override func awakeFromNib() {
         setup()
     }
 
+    /**
+        Re-renders the label with the settings supplied
+    */
     func setup() {
         if characterSpacing != nil && characterSpacing != 0 {
             var string = text

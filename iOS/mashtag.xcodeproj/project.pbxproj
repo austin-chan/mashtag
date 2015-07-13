@@ -135,8 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				BACBEC6D1B4DA9FC0032C6CB /* AppDelegate.swift */,
-				BAE065E21B4DFFE100669D6E /* Showstopper */,
-				BACBEC901B4DAFE30032C6CB /* Reusable */,
+				BAE065E21B4DFFE100669D6E /* Main View Controllers */,
+				BACBEC901B4DAFE30032C6CB /* Supporters */,
 				BACBEC8D1B4DAE340032C6CB /* Util */,
 				BAE065DB1B4DF41700669D6E /* Bridging-Header.h */,
 				BACBEC741B4DA9FC0032C6CB /* Images.xcassets */,
@@ -178,28 +178,28 @@
 		BACBEC8D1B4DAE340032C6CB /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				BA839B1B1B51C52C00A7DC64 /* DesignLabel.swift */,
+				BA471A9B1B50A6F6003C1CBA /* DesignButton.swift */,
 				BACBEC8E1B4DAE4F0032C6CB /* SwiftColors.swift */,
 				BAE065CF1B4DEA1800669D6E /* Util.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
 		};
-		BACBEC901B4DAFE30032C6CB /* Reusable */ = {
+		BACBEC901B4DAFE30032C6CB /* Supporters */ = {
 			isa = PBXGroup;
 			children = (
 				BA3371351B532FEF005E542F /* Animator.swift */,
-				BA839B1B1B51C52C00A7DC64 /* DesignLabel.swift */,
-				BA471A9B1B50A6F6003C1CBA /* DesignButton.swift */,
 				BACBEC911B4DB0110032C6CB /* GradientViewController.swift */,
 				BAC452971B4F16BE000B7F90 /* CameraRollViewCell.swift */,
 				BAC452981B4F16BE000B7F90 /* CameraRollViewCell.xib */,
 				BA839B131B50D62700A7DC64 /* StickerViewCell.swift */,
 				BA839B141B50D62700A7DC64 /* StickerViewCell.xib */,
 			);
-			name = Reusable;
+			name = Supporters;
 			sourceTree = "<group>";
 		};
-		BAE065E21B4DFFE100669D6E /* Showstopper */ = {
+		BAE065E21B4DFFE100669D6E /* Main View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				BACBEC6F1B4DA9FC0032C6CB /* HomeViewController.swift */,
@@ -211,7 +211,7 @@
 				BA839B171B51C14D00A7DC64 /* FinalizeViewController.swift */,
 				BA839B181B51C14D00A7DC64 /* FinalizeViewController.xib */,
 			);
-			name = Showstopper;
+			name = "Main View Controllers";
 			sourceTree = "<group>";
 		};
 		F761183EDC989512DF0B39AD /* Frameworks */ = {
@@ -269,7 +269,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
-				ORGANIZATIONNAME = Fiftyawoe;
+				ORGANIZATIONNAME = "Awoes, Inc.";
 				TargetAttributes = {
 					BACBEC671B4DA9FC0032C6CB = {
 						CreatedOnToolsVersion = 6.4;
