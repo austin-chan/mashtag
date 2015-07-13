@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="bunt-display-regular-webfont.ttf">
+            <string>SFUIDisplay-Regular</string>
+            <string>SFUIDisplay-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="mashtag" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="aLe-zt-ias" id="WNU-Rm-QpL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="aLe-zt-ias">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9d-Ai-tuT" userLabel="[Logo Area]">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="388"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwt-hV-onQ" userLabel="Logo Wrap">
+                            <rect key="frame" x="0.0" y="69" width="320" height="250"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MASHTAG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMs-fh-tBS" customClass="FXLabel">
+                                    <rect key="frame" x="0.0" y="160.5" width="320" height="41"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
+                                    <color key="textColor" red="0.52156862745098043" green="0.6470588235294118" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                            <real key="value" value="0.20000000000000001"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-1N-gkH" customClass="FXLabel">
+                                    <rect key="frame" x="0.0" y="205.5" width="320" height="42.5"/>
+                                    <string key="text">SHOP’ HUMUROUS PUBLIC FIGURES
+INTO YOUR PHOTOS </string>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                    <color key="textColor" red="0.52156862745098043" green="0.6470588235294118" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                            <real key="value" value="0.10000000000000001"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="nFj-1N-gkH" secondAttribute="trailing" id="88w-eq-o2f"/>
+                                <constraint firstItem="nFj-1N-gkH" firstAttribute="leading" secondItem="gwt-hV-onQ" secondAttribute="leading" id="Cze-hr-rgl"/>
+                                <constraint firstItem="nFj-1N-gkH" firstAttribute="top" secondItem="CMs-fh-tBS" secondAttribute="bottom" constant="4" id="Jle-zd-wAa"/>
+                                <constraint firstAttribute="trailing" secondItem="CMs-fh-tBS" secondAttribute="trailing" id="Q3I-OK-EaY"/>
+                                <constraint firstAttribute="bottom" secondItem="nFj-1N-gkH" secondAttribute="bottom" constant="2" id="Y5X-Hn-293"/>
+                                <constraint firstAttribute="height" constant="250" id="cEt-Le-R4u"/>
+                                <constraint firstItem="CMs-fh-tBS" firstAttribute="leading" secondItem="gwt-hV-onQ" secondAttribute="leading" id="k4M-Tu-dSX"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="gwt-hV-onQ" firstAttribute="leading" secondItem="M9d-Ai-tuT" secondAttribute="leading" id="2qA-Qb-QwI"/>
+                        <constraint firstAttribute="centerY" secondItem="gwt-hV-onQ" secondAttribute="centerY" id="AP2-9l-HKA"/>
+                        <constraint firstItem="gwt-hV-onQ" firstAttribute="top" secondItem="M9d-Ai-tuT" secondAttribute="top" constant="33" id="ulp-Hz-2ia"/>
+                        <constraint firstAttribute="trailing" secondItem="gwt-hV-onQ" secondAttribute="trailing" id="wTp-e1-deg"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ulp-Hz-2ia"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0P-CP-Pzg" userLabel="[Bottom Pusher]">
+                    <rect key="frame" x="0.0" y="388" width="320" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="fen-ag-8yS"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbw-Le-KG9" userLabel="[Create Photo]" customClass="DesignButton" customModule="mashtag" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="462" width="320" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="VQ9-aK-gfs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="15"/>
+                    <state key="normal" title="CREATE PHOTO">
+                        <color key="titleColor" red="0.42745098039215684" green="0.54509803921568623" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                            <real key="value" value="1.8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="createPhotoTap:" destination="-1" eventType="touchUpInside" id="M54-9G-jAj"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAp-UH-aQq" userLabel="[Create Photo] Top Border">
+                    <rect key="frame" x="0.0" y="462" width="320" height="1"/>
+                    <color key="backgroundColor" red="0.29411764705882354" green="0.33725490196078434" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="P3b-ep-l3d"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzk-wY-beT" userLabel="[Create Photo] Bottom Border">
+                    <rect key="frame" x="0.0" y="525" width="320" height="1"/>
+                    <color key="backgroundColor" red="0.29411764709999999" green="0.33725490200000002" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="rRN-EK-CIb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nzk-wY-beT" secondAttribute="trailing" id="1Vf-Yg-euF"/>
+                <constraint firstItem="nzk-wY-beT" firstAttribute="leading" secondItem="aLe-zt-ias" secondAttribute="leading" id="43F-5h-pHT"/>
+                <constraint firstItem="kbw-Le-KG9" firstAttribute="bottom" secondItem="nzk-wY-beT" secondAttribute="bottom" id="7sn-oz-go8"/>
+                <constraint firstItem="kbw-Le-KG9" firstAttribute="leading" secondItem="aLe-zt-ias" secondAttribute="leading" id="7uw-Hl-h4m"/>
+                <constraint firstAttribute="trailing" secondItem="kbw-Le-KG9" secondAttribute="trailing" id="8gR-BD-1qc"/>
+                <constraint firstItem="M9d-Ai-tuT" firstAttribute="leading" secondItem="aLe-zt-ias" secondAttribute="leading" id="8xH-gp-TSU"/>
+                <constraint firstItem="M9d-Ai-tuT" firstAttribute="top" secondItem="aLe-zt-ias" secondAttribute="top" id="9TF-yi-5ja"/>
+                <constraint firstAttribute="trailing" secondItem="H0P-CP-Pzg" secondAttribute="trailing" id="Ffy-Ca-60S"/>
+                <constraint firstItem="kbw-Le-KG9" firstAttribute="leading" secondItem="aLe-zt-ias" secondAttribute="leading" id="HtL-Xx-2hu"/>
+                <constraint firstItem="HAp-UH-aQq" firstAttribute="leading" secondItem="aLe-zt-ias" secondAttribute="leading" id="KgB-p6-IQu"/>
+                <constraint firstItem="H0P-CP-Pzg" firstAttribute="top" secondItem="M9d-Ai-tuT" secondAttribute="bottom" id="MtF-ux-XUt"/>
+                <constraint firstItem="kbw-Le-KG9" firstAttribute="bottom" secondItem="nzk-wY-beT" secondAttribute="bottom" id="PH5-PT-J38"/>
+                <constraint firstAttribute="trailing" secondItem="HAp-UH-aQq" secondAttribute="trailing" id="Q7U-Nt-ySW"/>
+                <constraint firstAttribute="trailing" secondItem="M9d-Ai-tuT" secondAttribute="trailing" id="UvW-Ba-6he"/>
+                <constraint firstAttribute="bottom" secondItem="H0P-CP-Pzg" secondAttribute="bottom" id="VFn-l9-d33"/>
+                <constraint firstItem="kbw-Le-KG9" firstAttribute="top" secondItem="HAp-UH-aQq" secondAttribute="top" id="YHw-SQ-Vha"/>
+                <constraint firstItem="kbw-Le-KG9" firstAttribute="leading" secondItem="aLe-zt-ias" secondAttribute="leading" id="cwX-rj-ABS"/>
+                <constraint firstItem="M9d-Ai-tuT" firstAttribute="leading" secondItem="aLe-zt-ias" secondAttribute="leading" id="ejl-TL-06O"/>
+                <constraint firstAttribute="trailing" secondItem="kbw-Le-KG9" secondAttribute="trailing" id="jWN-1i-5Wm"/>
+                <constraint firstItem="M9d-Ai-tuT" firstAttribute="top" secondItem="aLe-zt-ias" secondAttribute="top" id="mpH-zs-NDp"/>
+                <constraint firstAttribute="bottom" secondItem="kbw-Le-KG9" secondAttribute="bottom" constant="42" id="tL1-wJ-AlK"/>
+                <constraint firstAttribute="trailing" secondItem="kbw-Le-KG9" secondAttribute="trailing" id="v2o-tq-nBy"/>
+                <constraint firstItem="H0P-CP-Pzg" firstAttribute="leading" secondItem="aLe-zt-ias" secondAttribute="leading" id="z19-pe-lCt"/>
+                <constraint firstAttribute="trailing" secondItem="M9d-Ai-tuT" secondAttribute="trailing" id="zm9-Dw-Tlb"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="7uw-Hl-h4m"/>
+                    <exclude reference="PH5-PT-J38"/>
+                    <exclude reference="jWN-1i-5Wm"/>
+                    <exclude reference="v2o-tq-nBy"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="30" y="275"/>
+        </view>
+    </objects>
+</document>
