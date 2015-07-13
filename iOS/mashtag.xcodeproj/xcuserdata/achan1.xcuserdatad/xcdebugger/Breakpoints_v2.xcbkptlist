@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mashtag/CameraViewController.swift"
-            timestampString = "458439095.421247"
+            timestampString = "458446294.36571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "setCameraFlash(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mashtag/CameraViewController.swift"
-            timestampString = "458439095.421247"
+            timestampString = "458446563.921274"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "401"
-            endingLineNumber = "401"
+            startingLineNumber = "415"
+            endingLineNumber = "415"
             landmarkName = "drawFocusMarker(_:)"
             landmarkType = "5">
          </BreakpointContent>

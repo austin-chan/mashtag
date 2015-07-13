@@ -19,6 +19,10 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var cameraRollCollectionView: UICollectionView!
     @IBOutlet weak var flashButton: UIButton!
     @IBOutlet weak var imagePickerButton: UIButton!
+    @IBOutlet weak var bottomArea: UIView!
+    @IBOutlet weak var bottomHalf: UIView!
+    @IBOutlet weak var bottomHalfConstraintTop: NSLayoutConstraint!
+    @IBOutlet weak var topHalf: UIView!
 
     // Camera Properties
     let captureSession = AVCaptureSession()
@@ -327,7 +331,11 @@ class CameraViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
 
     func handlePrimitiveDevice() {
-        
+        if Util.isPrimitiveDevice {
+            bottomHalf.removeConstraint(bottomHalfConstraintTop)
+            bottomArea.addConstraint(NSLayoutConstraint(item: bottomHalf, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: bottomArea, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0))
+            topHalf.removeFromSuperview()
+        }
     }
 
     @IBAction func cameraTap(sender: UIButton) {

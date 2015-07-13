@@ -8,12 +8,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController" customModule="mashtag" customModuleProvider="target">
             <connections>
+                <outlet property="bottomArea" destination="IFk-4W-yIq" id="LNt-BV-f3t"/>
+                <outlet property="bottomHalf" destination="Sv5-qC-06K" id="QnH-Kg-NVV"/>
+                <outlet property="bottomHalfConstraintTop" destination="3qY-jt-VDa" id="NfH-qc-BaK"/>
                 <outlet property="cameraRollCollectionView" destination="3up-Ew-RcS" id="tsm-ey-ceF"/>
                 <outlet property="flashButton" destination="zSQ-gN-xBl" id="tlO-ra-jy5"/>
                 <outlet property="imagePickerButton" destination="dAX-qb-gIz" id="UDc-wx-N7v"/>
                 <outlet property="innerCameraButton" destination="Wuj-gk-kbZ" id="GdJ-ol-6a0"/>
                 <outlet property="mostRecentImageView" destination="Vk0-oZ-nR2" id="w9b-e0-Yhy"/>
                 <outlet property="outerCameraButton" destination="v0t-H4-bRH" id="hDK-do-cbn"/>
+                <outlet property="topHalf" destination="Xn9-VI-JZx" id="Kzk-vQ-lbg"/>
                 <outlet property="view" destination="iN0-l3-epB" id="uzo-oS-4l5"/>
             </connections>
         </placeholder>

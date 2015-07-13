@@ -69,7 +69,7 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let yPadding: CGFloat = 10
-        let rowHeight = (stickerCollectionHeight / 2) - yPadding
+        let rowHeight = (stickerCollectionHeight / (Util.isPrimitiveDevice || true ? 1 : 2)) - yPadding
         let imageSize = stickerCoverSizes[indexPath.row]
         let imageRatio = imageSize.width / imageSize.height
         return CGSizeMake(
