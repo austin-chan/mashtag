@@ -10,52 +10,75 @@ import UIKit
 
 class Animator: NSObject, UIViewControllerAnimatedTransitioning {
 
-    weak var transitionContext: UIViewControllerContextTransitioning?
+    var presenting: Bool?
 
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
-        return 1.5
+        return 0.5
     }
 
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        // get reference to our fromView, toView and the container view that we should perform the transition in
-        let container = transitionContext.containerView()
-        let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
-        let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
-        toView.frame = CGRectMake(0, 0, Util.screenSize.width, Util.screenSize.height)
+        var toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        var fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        let finalFrame = transitionContext.finalFrameForViewController(toViewController)
+        let initialFrame = transitionContext.initialFrameForViewController(toViewController)
 
-        // set up from 2D transforms that we'll use in the animation
-        let offScreenRight = CGAffineTransformMakeTranslation(container.frame.width, 0)
-        let offScreenLeft = CGAffineTransformMakeTranslation(-container.frame.width, 0)
+//        println(initialFrame)
+//        println(finalFrame)
 
-        // start the toView to the right of the screen
-        toView.transform = offScreenRight
-
-        // add the both views to our view controller
-        container.addSubview(toView)
-
-
-        // get the duration of the animation
-        // DON'T just type '0.5s' -- the reason why won't make sense until the next post
-        // but for now it's important to just follow this approach
         let duration = self.transitionDuration(transitionContext)
 
-        // perform the animation!
-        // for this example, just slid both fromView and toView to the left at the same time
-        // meaning fromView is pushed off the screen and toView slides into view
-        // we also use the block animation usingSpringWithDamping for a little bounce
-        UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.8, options: nil, animations: {
+        var container = transitionContext.containerView()
 
-            fromView.transform = offScreenLeft
-            toView.transform = CGAffineTransformIdentity
+        if presenting! {
+            container.addSubview(toViewController.view)
 
-            }, completion: { finished in
+            frontStart(fromViewController.view)
+            backStart(toViewController.view)
 
-                // tell our transitionContext object that we've finished animating
+            UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 8, options: nil, animations: {
+                self.frontEnd(fromViewController.view)
+                self.backEnd(toViewController.view)
+            }) { (finished) -> Void in
+                self.frontStart(fromViewController.view)
                 transitionContext.completeTransition(true)
+            }
+        } else {
+            container.insertSubview(toViewController.view, belowSubview: fromViewController.view)
 
-        })
+            backEnd(fromViewController.view)
+            frontEnd(toViewController.view)
 
-        println("S")
+            UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 8, options: nil, animations: {
+                self.backStart(fromViewController.view)
+
+                // weird iOS bug, have to repeat instructions here
+                toViewController.view.transform = CGAffineTransformIdentity
+                toViewController.view.frame = CGRectMake(0, 0, Util.screenSize.width, Util.screenSize.height)
+                toViewController.view.alpha = 1
+            }) { (finished) -> Void in
+                transitionContext.completeTransition(true)
+            }
+        }
+    }
+
+    func frontStart(view: UIView) {
+        view.frame = CGRectMake(0, 0, Util.screenSize.width, Util.screenSize.height)
+        view.transform = CGAffineTransformIdentity
+        view.alpha = 1
+    }
+
+    func frontEnd(view: UIView) {
+        view.frame = CGRectMake(0, 0, Util.screenSize.width, Util.screenSize.height)
+        view.transform = CGAffineTransformMakeScale(0.89, 0.89)
+        view.alpha = 0.73
+    }
+
+    func backStart(view: UIView) {
+        view.frame = CGRectMake(0, Util.screenSize.height, Util.screenSize.width, Util.screenSize.height)
+    }
+
+    func backEnd(view: UIView) {
+        view.frame = CGRectMake(0, 0, Util.screenSize.width, Util.screenSize.height)
     }
 
 }
