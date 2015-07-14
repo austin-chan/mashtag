@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mashtag/CameraViewController.swift"
-            timestampString = "458553144.966752"
+            timestampString = "458591013.942217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "364"
-            endingLineNumber = "364"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
             landmarkName = "CameraViewController"
             landmarkType = "3">
          </BreakpointContent>

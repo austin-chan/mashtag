@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>63CA2D6C-50E1-4944-A7CB-B6679A480A7B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>mashtag</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>07AC9A65AA941B159ECB5F2CA8249A8FF3EE176D</key>
+		<string>https://github.com/pastachan/mashtag.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/mashtag.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>07AC9A65AA941B159ECB5F2CA8249A8FF3EE176D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pastachan/mashtag.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>07AC9A65AA941B159ECB5F2CA8249A8FF3EE176D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>07AC9A65AA941B159ECB5F2CA8249A8FF3EE176D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mashtag</string>
+		</dict>
+	</array>
+</dict>
+</plist>

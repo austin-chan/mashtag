@@ -27,6 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
 
+        // enable Google Analytics tracking
+        var configureError:NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+
+        var gai = GAI.sharedInstance()
+        gai.trackUncaughtExceptions = true
+        gai.logger.logLevel = GAILogLevel.None
+
         // enable Facebook metric tracking, it makes them happy
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }

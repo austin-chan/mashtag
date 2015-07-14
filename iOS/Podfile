@@ -4,6 +4,7 @@ platform :ios, '8.0'
 source 'https://github.com/CocoaPods/Specs.git'
 pod "FBSDKCoreKit"
 pod "FBSDKShareKit"
+pod 'Google/Analytics', '~> 1.0.0'
 
 target 'mashtag' do
 

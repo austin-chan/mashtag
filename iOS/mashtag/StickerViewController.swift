@@ -47,6 +47,14 @@ class StickerViewController: UIViewController, UICollectionViewDataSource, UICol
         render()
     }
 
+    /// Enables Google Analytics tracking.
+    override func viewWillAppear(animated: Bool) {
+        var tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: "Sticker Screen")
+        var builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
+
     // MARK: UI Methods (#uimethods)
 
     /**

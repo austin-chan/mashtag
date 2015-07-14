@@ -60,6 +60,14 @@ class HomeViewController: GradientViewController  {
         }
     }
 
+    /// Enables Google Analytics tracking.
+    override func viewWillAppear(animated: Bool) {
+        var tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: "Home Screen")
+        var builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
+
     // MARK: IBActions
 
     /// Activates the next view controller if permissions are all correct or prompts the user to grant permissions.

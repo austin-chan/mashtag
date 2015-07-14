@@ -33,6 +33,7 @@
 		BAE065D81B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAE065D41B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf */; };
 		BAE065E11B4DFE7500669D6E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE065E01B4DFE7500669D6E /* CameraViewController.swift */; };
 		BAE065E41B4E002800669D6E /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAE065E31B4E002800669D6E /* CameraViewController.xib */; };
+		BAEFEE981B558A3D008A4FD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BAEFEE971B558A3D008A4FD2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		BAE065DB1B4DF41700669D6E /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		BAE065E01B4DFE7500669D6E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		BAE065E31B4E002800669D6E /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		BAEFEE971B558A3D008A4FD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE410341A605B1432B088CF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E723832DD6909FDD9FDFFBBF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 				BAE065D21B4DEBAF00669D6E /* bunt-display-medium-webfont.ttf */,
 				BAE065D31B4DEBAF00669D6E /* bunt-display-regular-webfont.ttf */,
 				BAE065D41B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf */,
+				BAEFEE971B558A3D008A4FD2 /* GoogleService-Info.plist */,
 				BACBEC6C1B4DA9FC0032C6CB /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -306,6 +309,7 @@
 				BAE065D81B4DEBAF00669D6E /* bunt-display-thin-webfont.ttf in Resources */,
 				BAC4529A1B4F16BE000B7F90 /* CameraRollViewCell.xib in Resources */,
 				BAE065D51B4DEBAF00669D6E /* bunt-display-light-webfont.ttf in Resources */,
+				BAEFEE981B558A3D008A4FD2 /* GoogleService-Info.plist in Resources */,
 				BACBEC751B4DA9FC0032C6CB /* Images.xcassets in Resources */,
 				BAE065D71B4DEBAF00669D6E /* bunt-display-regular-webfont.ttf in Resources */,
 				BA839B1A1B51C14D00A7DC64 /* FinalizeViewController.xib in Resources */,
