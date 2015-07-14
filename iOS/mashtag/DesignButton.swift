@@ -22,7 +22,7 @@ class DesignButton: UIButton {
     }
 
     /**
-        Re-renders the button with the settings supplied
+        Re-renders the button with the settings supplied.
     */
     func setup() {
         if characterSpacing != nil && characterSpacing != 0 {

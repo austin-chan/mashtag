@@ -13,12 +13,19 @@ import UIKit;
 import AVFoundation
 import Photos
 
+/// A view controller to welcome the user and start the photo editing process.
 class HomeViewController: GradientViewController  {
 
     // IBOutlets
     @IBOutlet weak var startButton: DesignButton!
 
-    // Returns 0 if all access is granted, 1 if user has not been asked, and 2 if they have denied
+    /**
+        Determines the permission access value.
+
+        -0: all access is granted
+        -1: the user has not been asked
+        -2: access was denied already
+    */
     var permissionAccess: Int {
         var permission = 0
 
@@ -53,8 +60,9 @@ class HomeViewController: GradientViewController  {
         }
     }
 
-    // MARK: UI Methods
+    // MARK: IBActions
 
+    /// Activates the next view controller if permissions are all correct or prompts the user to grant permissions.
     @IBAction func createPhotoTap(sender: UIButton) {
         switch permissionAccess {
         case 0:

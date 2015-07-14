@@ -22,14 +22,14 @@ class StickerViewCell: UICollectionViewCell {
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
     }
 
-    /// Run the 'pop' animation on tap down of the cell.
+    /// Runs the 'pop' animation on tap down of the cell.
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         super.touchesBegan(touches, withEvent: event)
         scaleIn()
     }
 
     /**
-        Run 'pop' animation for the sticker to expand and then bounce back to regular size quickly.
+        Runs 'pop' animation for the sticker to expand and then bounce back to regular size quickly.
     */
     func scaleIn() {
         UIView.animateWithDuration(0.1, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 10, options: nil, animations: {

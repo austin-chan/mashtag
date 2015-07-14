@@ -22,7 +22,7 @@ class DesignLabel: UILabel {
     }
 
     /**
-        Re-renders the label with the settings supplied
+        Re-renders the label with the settings supplied.
     */
     func setup() {
         if characterSpacing != nil && characterSpacing != 0 {

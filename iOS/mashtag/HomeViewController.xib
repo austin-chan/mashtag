@@ -28,7 +28,7 @@
                             <rect key="frame" x="0.0" y="69" width="320" height="250"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MASHTAG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMs-fh-tBS" customClass="DesignLabel" customModule="mashtag" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="160.5" width="320" height="41"/>
+                                    <rect key="frame" x="0.0" y="160" width="320" height="41"/>
                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                     <color key="textColor" red="0.52156862745098043" green="0.6470588235294118" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFj-1N-gkH" customClass="DesignLabel" customModule="mashtag" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="205.5" width="320" height="42.5"/>
+                                    <rect key="frame" x="0.0" y="205" width="320" height="42.5"/>
                                     <string key="text">ADD FAMOUS FIGURES
 TO YOUR PHOTOS </string>
                                     <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
@@ -51,6 +51,13 @@ TO YOUR PHOTOS </string>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="SLK-zj-bhe">
+                                    <rect key="frame" x="90" y="5" width="140" height="140"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="140" id="azY-Fc-0l7"/>
+                                        <constraint firstAttribute="height" constant="140" id="b08-tG-QNI"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="nFj-1N-gkH" secondAttribute="trailing" id="88w-eq-o2f"/>
@@ -59,7 +66,9 @@ TO YOUR PHOTOS </string>
                                 <constraint firstAttribute="trailing" secondItem="CMs-fh-tBS" secondAttribute="trailing" id="Q3I-OK-EaY"/>
                                 <constraint firstAttribute="bottom" secondItem="nFj-1N-gkH" secondAttribute="bottom" constant="2" id="Y5X-Hn-293"/>
                                 <constraint firstAttribute="height" constant="250" id="cEt-Le-R4u"/>
+                                <constraint firstItem="SLK-zj-bhe" firstAttribute="top" secondItem="gwt-hV-onQ" secondAttribute="top" constant="5" id="htL-MA-hmA"/>
                                 <constraint firstItem="CMs-fh-tBS" firstAttribute="leading" secondItem="gwt-hV-onQ" secondAttribute="leading" id="k4M-Tu-dSX"/>
+                                <constraint firstAttribute="centerX" secondItem="SLK-zj-bhe" secondAttribute="centerX" id="u3t-p5-4eg"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -154,4 +163,7 @@ TO YOUR PHOTOS </string>
             <point key="canvasLocation" x="30" y="275"/>
         </view>
     </objects>
+    <resources>
+        <image name="Logo" width="300" height="300"/>
+    </resources>
 </document>

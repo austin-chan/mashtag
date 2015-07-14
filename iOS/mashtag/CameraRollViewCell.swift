@@ -23,26 +23,26 @@ class CameraRollViewCell: UICollectionViewCell {
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
     }
 
-    /// Darken cell on tap down.
+    /// Darkens cell.
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         super.touchesBegan(touches, withEvent: event)
         darken()
     }
 
-    /// Lighten cell on tap up.
+    /// Lightens cell.
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
         super.touchesEnded(touches, withEvent: event)
         lighten()
     }
 
-    /// Lighten cell on tap cancel.
+    /// Lightens cell.
     override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
         super.touchesCancelled(touches, withEvent: event)
         lighten()
     }
 
     /**
-        Run an animation to darkens the cell.
+        Runs an animation to darkens the cell.
     */
     func darken() {
         let dark = UIColor(hexString: "#000000", alpha: 0.45)
@@ -52,7 +52,7 @@ class CameraRollViewCell: UICollectionViewCell {
     }
 
     /**
-        Run an animation to lighten the cell to regular color.
+        Runs an animation to lighten the cell to regular color.
     */
     func lighten() {
         let light = UIColor(hexString: "#000000", alpha: 0.05)

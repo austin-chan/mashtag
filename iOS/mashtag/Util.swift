@@ -14,10 +14,10 @@ import UIKit
 /// A utility struct containing common actions and data for Mashtag
 struct Util {
 
-    // The device screen size.
+    /// The device screen size.
     static let screenSize: CGRect = UIScreen.mainScreen().bounds
 
-    // Closure delay timeout.
+    /// Closure delay timeout.
     static func delay(delay:Double, closure:()->()) {
         dispatch_after(
             dispatch_time(
@@ -27,7 +27,7 @@ struct Util {
             dispatch_get_main_queue(), closure)
     }
 
-    // Whether or not the device is an iPhone 4S or older.
+    /// Whether or not the device is an iPhone 4S or older.
     static var isPrimitiveDevice: Bool {
         return screenSize.height <= 480
     }
