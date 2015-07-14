@@ -4,7 +4,7 @@ Mashtag is an iPhone app that splices pictures of famous people to photos alread
 
 ## App Building
 
-Mashtag uses [CocoaPods](https://cocoapods.org/) to manage dependencies so to build the application with its dependencies, navigate to the main iOS project directory and run (CocoaPods must be installed):
+Mashtag uses [CocoaPods](https://cocoapods.org/) to manage dependencies so to build the application, navigate to the main iOS project directory and run (CocoaPods must be installed):
 ```
 pod install
 ```
