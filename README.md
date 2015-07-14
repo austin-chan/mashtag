@@ -2,6 +2,13 @@
 
 Mashtag is an iPhone app that splices pictures of famous people to photos already saved on the device. Photo snippets of famous figures can be inserted into other photos as stickers and then may be moved, expanded, or rotated to the right position. The main purpose for the creation of Mashtag is developmental education.
 
+## App Building
+
+Mashtag uses [CocoaPods](https://cocoapods.org/) to manage dependencies so to build the application with its dependencies, navigate to the main iOS project directory and run (CocoaPods must be installed):
+```
+pod install
+```
+
 ## Repo Notes
 
 This app was created from concept to design to product in seven days. It focuses strongly on using iOS framework components that have been released in the past two years like [Photos Framework](https://developer.apple.com/library/ios/documentation/Photos/Reference/Photos_Framework/index.html#//apple_ref/doc/uid/TP40014408) (available starting iOS 8).
